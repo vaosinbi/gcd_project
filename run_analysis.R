@@ -1,6 +1,10 @@
 # source file url
 file_url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 
+# if not exists create data folder
+if (!file.exists("./data")) {dir.create("./data")}
+
+
 # download file using curl because of https
 download.file( file_url, destfile="./data/datasets.zip", method="curl")
 
